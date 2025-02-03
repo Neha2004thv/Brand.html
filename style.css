@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(113, 109, 109);
+}
+
+header{
+    background-color: #000;
+    color: white;
+    padding: 14px 14px;
+    font-size: 18px;
+    box-shadow: 0px 0px 5px;
+}
+
+li{
+    list-style: none;
+    padding: 0px 20px;
+    display: inline;
+    letter-spacing: 10px;
+
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+   /* background-color: brown; */
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#main img{
+    top: 10%;
+    width: 500px;
+    height: 700px;
+    position: relative;
+    z-index: 99;
+    object-fit: cover;
+}
+
+#scroll-div {
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    height: 100px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div h1{
+    display: inline-block;
+    font-size: 110px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    font-family: monument;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll-div2 {
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    z-index: 100;
+    /*height: 100px;*/
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div2::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div2 h1{
+    display: inline-block;
+    font-size: 120px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 3px;
+    color: transparent;
+    font-family: monument;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll-div3 {
+    position: absolute;
+    top: 64%;
+    width: 100%;
+    height: 100px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div3::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div3 h1{
+    display: inline-block;
+    font-size: 110px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    font-family: monument;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
+
+#text{
+    font-size: 30px;
+    position: absolute;
+    font-family: monument;
+    width: 60%;
+    /*background-color: rebeccapurple;*/
+    z-index: 999;
+    top: 10%;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(76, 76, 74);
+}
+
+#last{
+    font-size: 25px;
+    position: absolute;
+    font-family: monument;
+    width: 100%;
+    z-index: 999;
+    top: 80%;
+    color: #5a4d4d;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(calc(-100%  - 32px));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+footer{
+    background: #343434;
+    padding-top: 50px;
+}
+.container{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-content{
+    width: 33.3%;
+}
+h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer-content p{
+    width:190px;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    text-align: center;
+    list-style-type:none;
+    padding: 7px;
+    position: relative;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i{
+    color: white;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #f18930;
+}
+.social-icons i:hover{
+    color: #f18930;
+}
+.bottom-bar{
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
